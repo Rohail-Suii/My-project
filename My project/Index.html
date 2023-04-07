@@ -29,17 +29,24 @@
                 <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
                 <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
+            <div class="quote">
+                <h1 style="font-size: 50px;">IRON DON'T <span style="color: #e02b2b; font-style: oblique;">LIE</span> </h1>
+            </div>
+            <div class="why">
+                <a href="#gym" class="whyb">WHY US</a>
+            </div>
         </div>
 
     </section>
     <section id="gym" class="page">            
         <div class="gymh">
-            <h1>ONE MEMBERSHIP AND <br>
+            <h1 class="h-1">ONE MEMBERSHIP AND <br>
                 ACCESS <br>
                 OVER <span style="color: #e02b2b; font-style: oblique;">312 GYMS</span>   ACROSS<br>
                 PAKISTAN
             </h1>
-            <a href="#membership" class="btn btnm">MEMBERSHIP</a>
+            
+            
         </div>        
 
         <div class="gymp">
@@ -47,6 +54,15 @@
                 <br><br>
                 Access to the best gyms across <br>
                 lahore, karachi, islamabad and 11 other cities.</p>
+        </div>
+        <div class="membtn">
+            <a href="#membership" class="btn btnm">MEMBERSHIP</a>
+        </div>
+
+        <div class="trainh">
+            <h1>OUR <span style="color: #e02b2b; font-style: oblique;">TRAINING</span>  PLAN</h1>
+            <p>Once you have determined the training needed, <br><br> you can set goals with our variety of <span>programs</span></p>
+            <a href="#training">TRAINING</a>
         </div>
         
     </div>
@@ -58,6 +74,19 @@
         const header = document.querySelector('.link1');
         const gym = document.querySelector('.link2');
         $('.btn').on('click',function(event){
+            if(this.hash!==''){
+                event.preventDefault();
+                const hash = this.hash;
+                $('html,body').animate(
+                    {
+                        scrollTop:$(hash).offset().top
+                    },
+                    800
+                );
+            }
+            
+        });
+        $('.whyb').on('click',function(event){
             if(this.hash!==''){
                 event.preventDefault();
                 const hash = this.hash;
